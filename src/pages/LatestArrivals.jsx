@@ -7,9 +7,7 @@ const LatestArrivals = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios(
-        "../../public/json-data/latestarrivals.json"
-      );
+      const response = await axios("/latestarrivals.json");
       setLatestArrivals(response.data.data);
     };
     getData();
